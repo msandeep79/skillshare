@@ -10,7 +10,7 @@ class SignUp(models.Model):
     email = models.EmailField()
     timestamp = models.DateTimeField(auto_now_add=True, auto_now=False)
     updated = models.DateTimeField(auto_now_add=False, auto_now=True)
-    phone = models.TextField(primary_key=True)
+    phonenumber = models.CharField(max_length=20, null=False, blank=True, primary_key=True)
     
     def __unicode__(self):
         return smart_unicode(self.email)
