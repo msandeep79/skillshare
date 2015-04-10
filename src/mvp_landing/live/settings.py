@@ -25,8 +25,14 @@ SECRET_KEY = '%^jkf9^bgi9_bhxg23lq3y&efnw4n2#ku&m6)pd6y#nq^o85+)'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['connectr.in','www.connectr.in']
 
+#Email Settings
+EMAIL_USE_TLS = True
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_HOST_USER = 'sandeep@connectr.in'
+EMAIL_HOST_PASSWORD = 'Keshav078'
+EMAIL_PORT = 587
 
 # Application definition
 
@@ -37,6 +43,7 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'signups',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -52,21 +59,6 @@ MIDDLEWARE_CLASSES = (
 
 ROOT_URLCONF = 'mvp_landing.urls'
 
-TEMPLATES = [
-    {
-        'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
-        'APP_DIRS': True,
-        'OPTIONS': {
-            'context_processors': [
-                'django.template.context_processors.debug',
-                'django.template.context_processors.request',
-                'django.contrib.auth.context_processors.auth',
-                'django.contrib.messages.context_processors.messages',
-            ],
-        },
-    },
-]
 
 WSGI_APPLICATION = 'mvp_landing.wsgi.application'
 
@@ -113,6 +105,6 @@ if DEBUG:
     STATIC_ROOT = '/home/msandeep/webapps/connectr_static/'
     MEDIA_ROOT = '/home/msandeep/webapps/connectr_static/media/'
     STATICFILES_DIRS = (
-    '/home/msandeep/webapps/connectr_static/',
+    '/home/msandeep/webapps/connectr_static/static/',
 )
    
