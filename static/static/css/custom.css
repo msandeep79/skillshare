@@ -1,3 +1,7 @@
 .jumbotron {
   background-color: #9bc093;
 }
+
+.jumbotron body {
+  padding-top: 10px;
+}
